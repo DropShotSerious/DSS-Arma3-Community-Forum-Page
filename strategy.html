@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="DSS Arma 3 Community - Strategy Discussions and Tactics">
+    <meta name="keywords" content="Arma 3, DSS, strategy, tactics, gameplay, military strategy, teamwork">
+    <title>Strategy - DSS Arma 3 Community</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="path-to-favicon.ico" type="image/x-icon">
+
+    <style>
+        /* Basic styling for the page */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        header nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main content and sidebar styling */
+        main {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        #forum-thread {
+            flex: 1;
+            max-width: 75%;
+        }
+
+        #sidebar {
+            width: 20%;
+            background-color: #fff;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Thread list styling */
+        .thread {
+            background-color: #fff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .thread p {
+            margin: 5px 0;
+        }
+
+        .thread h3 {
+            margin-top: 0;
+        }
+
+        /* Button styling */
+        .button-primary {
+            background-color: #3498db;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button-primary:hover {
+            background-color: #2980b9;
+        }
+
+        /* Categories styling */
+        #categories {
+            margin-bottom: 20px;
+        }
+
+        #categories ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #categories ul li {
+            margin: 5px 0;
+        }
+
+        #categories ul li a {
+            text-decoration: none;
+            color: #3498db;
+        }
+
+        /* Pagination */
+        #pagination {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        #pagination ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #pagination ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        #pagination ul li a {
+            text-decoration: none;
+            color: #3498db;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Strategy - DSS Arma 3 Community</h1>
+            <nav aria-label="Forum navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="forum-thread.html">Community</a></li>
+                    <li><a href="general-discussion.html">General Discussion</a></li>
+                    <li><a href="gameplay-page.html">Gameplay</a></li>
+                    <li><a href="index.html">Events</a></li>
+                    <li><a href="index.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Sidebar Section -->
+        <aside id="sidebar">
+            <h3>Strategy Categories</h3>
+            <ul>
+                <li><a href="#tactics">Basic Tactics</a></li>
+                <li><a href="#teamwork">Teamwork & Coordination</a></li>
+                <li><a href="#combat">Combat Strategies</a></li>
+                <li><a href="#missions">Mission Planning</a></li>
+                <li><a href="#advanced">Advanced Strategies</a></li>
+            </ul>
+        </aside>
+
+        <!-- Forum Thread Section -->
+        <section id="forum-thread">
+            <!-- Categories Section -->
+            <section id="categories">
+                <h3>Featured Strategy Threads</h3>
+                <div class="thread">
+                    <h3><a href="#thread1">Basic Squad Tactics for New Players</a></h3>
+                    <p><strong>Username</strong> - <span>2 hours ago</span></p>
+                    <p>New to Arma 3? Learn the basics of squad tactics and how to stay alive in combat!</p>
+                    <a href="#thread1" class="button-primary">View Thread</a>
+                </div>
+
+                <div class="thread">
+                    <h3><a href="#thread2">Team Coordination for Winning Missions</a></h3>
+                    <p><strong>Username</strong> - <span>1 day ago</span></p>
+                    <p>Effective communication and coordination are key to mission success. Here's how to do it right.</p>
+                    <a href="#thread2" class="button-primary">View Thread</a>
+                </div>
+
+                <div class="thread">
+                    <h3><a href="#thread3">Best Combat Strategies for Urban Warfare</a></h3>
+                    <p><strong>Username</strong> - <span>3 days ago</span></p>
+                    <p>Urban warfare presents unique challenges. Learn the best strategies for navigating and fighting in cities.</p>
+                    <a href="#thread3" class="button-primary">View Thread</a>
+                </div>
+
+                <div class="thread">
+                    <h3><a href="#thread4">Advanced Ambush Tactics</a></h3>
+                    <p><strong>Username</strong> - <span>1 week ago</span></p>
+                    <p>Learn how to set up and execute effective ambushes using terrain and timing.</p>
+                    <a href="#thread4" class="button-primary">View Thread</a>
+                </div>
+            </section>
+
+            <!-- Pagination Section -->
+            <section id="pagination">
+                <p>Page 1 of 3</p>
+                <nav>
+                    <ul>
+                        <li><a href="#">Prev</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">Next</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 DSS Arma 3 Community. All rights reserved.</p>
+        <p>Follow us on: <a href="https://discord.gg/FPnx3ZPehF" target="_blank">Discord</a></p>
+    </footer>
+
+</body>
+
+</html>
