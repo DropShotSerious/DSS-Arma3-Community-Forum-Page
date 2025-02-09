@@ -8,38 +8,43 @@
     <meta name="description" content="Join the DSS Arma 3 Community for tactical gameplay, mods, and active events.">
     <meta name="keywords" content="Arma 3, DSS, mods, community, events">
     <title>DSS Arma 3 Community</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="path-to-favicon.ico" type="image/x-icon">
 
     <style>
-        /* Using CSS Variables for consistent spacing */
         :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --highlight-color: #f39c12;
+            --background-color: #ecf0f1;
+            --hover-color: #2980b9;
             --space-unit: 16px;
         }
 
-        /* Reset some default styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Body & Fonts */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
             color: #333;
+            line-height: 1.6;
         }
 
         h1,
         h2 {
-            color: #2c3e50;
+            color: var(--secondary-color);
+            font-family: 'Oswald', sans-serif;
         }
 
-        /* Header Section */
         header {
-            background-color: #2c3e50;
+            background: linear-gradient(to right, #3498db, #2980b9);
             color: white;
             padding: var(--space-unit) 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         header .container {
@@ -63,13 +68,13 @@
             text-decoration: none;
             color: white;
             font-weight: bold;
+            transition: color 0.3s ease;
         }
 
-        header nav ul li a:focus {
-            outline: 2px solid #f39c12;
+        header nav ul li a:hover {
+            color: var(--highlight-color);
         }
 
-        /* Main Section */
         main {
             padding: 40px 0;
             background-color: #fff;
@@ -78,30 +83,52 @@
         section {
             padding: 30px;
             margin-bottom: var(--space-unit);
-            background-color: #ecf0f1;
+            background-color: var(--background-color);
             border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
 
         section h2 {
             margin-bottom: var(--space-unit);
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
         }
 
-        /* Server Stats */
+        .button-primary {
+            display: inline-block;
+            padding: var(--space-unit) 20px;
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .button-primary:hover {
+            background-color: var(--hover-color);
+            transform: scale(1.05);
+        }
+
         .server-stats p {
             margin: var(--space-unit) 0;
+            font-size: 1.1rem;
         }
 
         #server-status {
             color: green;
         }
 
-        #player-count {
-            font-weight: bold;
-        }
-
         /* Event List */
         .event-list p {
             margin: var(--space-unit) 0;
+            font-size: 1.1rem;
         }
 
         /* Contact Form */
@@ -110,42 +137,51 @@
             flex-direction: column;
         }
 
-        form label {
-            margin-bottom: var(--space-unit);
-        }
-
         form input,
         form textarea {
             padding: var(--space-unit);
             margin-bottom: var(--space-unit);
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 8px;
+            transition: border-color 0.3s ease;
+        }
+
+        form input:focus,
+        form textarea:focus {
+            border-color: var(--primary-color);
+            outline: none;
         }
 
         form button {
             padding: var(--space-unit) 20px;
-            background-color: #2c3e50;
+            background-color: var(--primary-color);
             color: white;
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         form button:hover {
-            background-color: #34495e;
+            background-color: var(--hover-color);
+            transform: scale(1.05);
         }
 
-        /* Footer Section */
         footer {
-            background-color: #2c3e50;
+            background-color: var(--secondary-color);
             color: white;
             padding: 20px 0;
             text-align: center;
         }
 
         footer a {
-            color: #ecf0f1;
+            color: var(--highlight-color);
             text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ecf0f1;
         }
 
         /* Responsive Design */
@@ -192,12 +228,7 @@
         <section id="home">
             <h2>Welcome to the DSS Arma 3 Community</h2>
             <p>Join us for tactical gameplay, mods, and an active community.</p>
-            <!-- Server Stats Example -->
-            <div class="server-stats">
-                <p>Server Status: <span id="server-status">Offline</span></p>
-                <p>Players Online: <span id="player-count">000</span></p>
-                <p>Active Mods: <span id="active-mods">Currently 13</span></p>
-            </div>
+            <a href="#events" class="button-primary">Join the Action</a>
         </section>
 
         <!-- About Section -->
@@ -210,27 +241,26 @@
         <section id="community">
             <h2>Community Hub</h2>
             <p>Join our forums to discuss tactics, share content, and meet fellow players!</p>
-            <!-- Link to Forum (you can integrate a forum later) -->
-            <a href="#">Go to Forum</a>
+            <a href="#" class="button-primary">Go to Forum</a>
         </section>
 
         <!-- Mods Section -->
         <section id="mods">
             <h2>Featured Mods</h2>
             <ul>
-                <li>Mod 1: Ace - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=463939057" target="_blank" aria-label="Download Mod Ace">Download</a></li>
-                <li>Mod 2: Antistasi - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2867537125" target="_blank" aria-label="Download Mod Antistasi">Download</a></li>
-                <li>Mod 3: Bystrokhodny Tanks - BT7 And Variants - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2398198697" target="_blank" aria-label="Download Mod Bystrokhodny Tanks - BT7 And Variants">Download</a></li>
-                <li>Mod 4: CBA_A3 - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=450814997" target="_blank" aria-label="Download Mod CBA_A3">Download</a></li>
-                <li>Mod 5: Colorful Flares - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3364788586" target="_blank" aria-label="Download Mod Colorful Flares">Download</a></li>
-                <li>Mod 6: CUP Terrains - Core - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=583496184" target="_blank" aria-label="Download Mod CUP Terrains - Core">Download</a></li>
-                <li>Mod 7: CUP Terrains - Maps - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=583544987" target="_blank" aria-label="Download Mod CUP Terrains - Maps">Download</a></li>
-                <li>Mod 8: IFA3 AIO  - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2648308937" target="_blank" aria-label="Download Mod IFA3 AIO">Download</a></li>
-                <li>Mod 9: JSRS SOUNDMOD 2025 Beta - AiO Compat Files - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3407970596" target="_blank" aria-label="Download Mod JSRS SOUNDMOD 2025 Beta - AiO Compat Files">Download</a></li>
-                <li>Mod 10: JSRS SOUNDMOD 2025 Beta - RC1 - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3407948300" target="_blank" aria-label="Download Mod JSRS SOUNDMOD 2025 Beta - RC1">Download</a></li>
-                <li>Mod 11: WW2 Armored Cars [IFA3] - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2811202098" target="_blank" aria-label="Download Mod WW2 Armored Cars [IFA3]">Download</a></li>
-                <li>Mod 12: WW2 Tanks [IFA3] - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2842504702" target="_blank" aria-label="Download Mod WW2 Tanks [IFA3]">Download</a></li>
-                <li>Mod 13: Zeus Enhanced - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1779063631" target="_blank" aria-label="Download Mod Zeus Enhanced">Download</a></li>
+                <li>Mod 1: Ace - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=463939057" target="_blank" class="button-primary">Download</a></li>
+                <li>Mod 2: Antistasi - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2867537125" target="_blank" class="button-primary">Download</a></li>
+                <li>Mod 3: Bystrokhodny Tanks - BT7 And Variants - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2398198697" target="_blank" class="button-primary">Download</a></li>
+                <li>Mod 4: CBA_A3 - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=450814997" target="_blank" class="button-primary">Download</a></li>
+                <li>Mod 5: Colorful Flares - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3364788586" target="_blank" class="button-primary">Download</a></li>
+                <li>Mod 6: CUP Terrains - Core - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=583496184" target="_blank" class="button-primary">Download</a></li>
+                <li>Mod 7: CUP Terrains - Maps - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=583544987" target="_blank" class="button-primary">Download</a></li>
+                <li>Mod 8: IFA3 AIO  - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2648308937" target="_blank" class="button-primary">Download</a></li>
+                <li>Mod 9: JSRS SOUNDMOD 2025 Beta - AiO Compat Files - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3407970596" target="_blank" class="button-primary">Download</a></li>
+                <li>Mod 10: JSRS SOUNDMOD 2025 Beta - RC1 - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3407948300" target="_blank" class="button-primary">Download</a></li>
+                <li>Mod 11: WW2 Armored Cars [IFA3] - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2811202098" target="_blank" class="button-primary">Download</a></li>
+                <li>Mod 12: WW2 Tanks [IFA3] - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2842504702" target="_blank" class="button-primary">Download</a></li>
+                <li>Mod 13: Zeus Enhanced - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1779063631" target="_blank" class="button-primary">Download</a></li>
             </ul>
         </section>
 
@@ -239,7 +269,7 @@
             <h2>Upcoming Events</h2>
             <div class="event-list">
                 <p>2025 - Coming Soon</p>
-                <p>2025 - Coming Soon</p>
+                <!-- Add more events -->
             </div>
         </section>
 
@@ -248,11 +278,11 @@
             <h2>Contact Us</h2>
             <form id="contact-form">
                 <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" aria-required="true" required>
+                <input type="text" id="name" name="name" required>
                 <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" aria-required="true" required>
+                <input type="email" id="email" name="email" required>
                 <label for="message">Your Message</label>
-                <textarea id="message" name="message" aria-required="true" required></textarea>
+                <textarea id="message" name="message" required></textarea>
                 <button type="submit">Submit</button>
             </form>
         </section>
@@ -260,10 +290,8 @@
 
     <!-- Footer Section -->
     <footer>
-        <div class="container">
-            <p>&copy; 2025 DSS Arma 3 Community. All rights reserved.</p>
-            <p>Follow us on: <a href="https://discord.gg/FPnx3ZPehF" target="_blank">Discord</a> | <a href="https://discord.gg/your-discod-link" target="_blank">Discord</a></p>
-        </div>
+        <p>&copy; 2025 DSS Arma 3 Community. All rights reserved.</p>
+        <p>Follow us on: <a href="https://discord.gg/FPnx3ZPehF" target="_blank">Discord</a></p>
     </footer>
 
 </body>
