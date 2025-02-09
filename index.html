@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,14 @@
     <meta name="description" content="Join the DSS Arma 3 Community for tactical gameplay, mods, and active events.">
     <meta name="keywords" content="Arma 3, DSS, mods, community, events">
     <title>DSS Arma 3 Community</title>
+    <link rel="icon" href="path-to-favicon.ico" type="image/x-icon">
 
     <style>
+        /* Using CSS Variables for consistent spacing */
+        :root {
+            --space-unit: 16px;
+        }
+
         /* Reset some default styles */
         * {
             margin: 0;
@@ -23,7 +30,8 @@
             color: #333;
         }
 
-        h1, h2 {
+        h1,
+        h2 {
             color: #2c3e50;
         }
 
@@ -31,7 +39,7 @@
         header {
             background-color: #2c3e50;
             color: white;
-            padding: 20px 0;
+            padding: var(--space-unit) 0;
         }
 
         header .container {
@@ -48,13 +56,17 @@
         }
 
         header nav ul li {
-            margin: 0 15px;
+            margin: 0 var(--space-unit);
         }
 
         header nav ul li a {
             text-decoration: none;
             color: white;
             font-weight: bold;
+        }
+
+        header nav ul li a:focus {
+            outline: 2px solid #f39c12;
         }
 
         /* Main Section */
@@ -65,18 +77,18 @@
 
         section {
             padding: 30px;
-            margin-bottom: 20px;
+            margin-bottom: var(--space-unit);
             background-color: #ecf0f1;
             border-radius: 8px;
         }
 
         section h2 {
-            margin-bottom: 20px;
+            margin-bottom: var(--space-unit);
         }
 
         /* Server Stats */
         .server-stats p {
-            margin: 5px 0;
+            margin: var(--space-unit) 0;
         }
 
         #server-status {
@@ -89,7 +101,7 @@
 
         /* Event List */
         .event-list p {
-            margin: 10px 0;
+            margin: var(--space-unit) 0;
         }
 
         /* Contact Form */
@@ -99,18 +111,19 @@
         }
 
         form label {
-            margin-bottom: 8px;
+            margin-bottom: var(--space-unit);
         }
 
-        form input, form textarea {
-            padding: 10px;
-            margin-bottom: 15px;
+        form input,
+        form textarea {
+            padding: var(--space-unit);
+            margin-bottom: var(--space-unit);
             border: 1px solid #ccc;
             border-radius: 4px;
         }
 
         form button {
-            padding: 10px 20px;
+            padding: var(--space-unit) 20px;
             background-color: #2c3e50;
             color: white;
             border: none;
@@ -150,15 +163,17 @@
                 width: 100%;
             }
         }
+
     </style>
 </head>
+
 <body>
 
     <!-- Header Section -->
     <header>
         <div class="container">
             <h1>Arma 3 Community</h1>
-            <nav>
+            <nav aria-label="Main navigation">
                 <ul>
                     <li><a href="#home" aria-label="Go to Home">Home</a></li>
                     <li><a href="#about" aria-label="Go to About">About</a></li>
@@ -233,11 +248,11 @@
             <h2>Contact Us</h2>
             <form id="contact-form">
                 <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" aria-required="true" required>
                 <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" aria-required="true" required>
                 <label for="message">Your Message</label>
-                <textarea id="message" name="message" required></textarea>
+                <textarea id="message" name="message" aria-required="true" required></textarea>
                 <button type="submit">Submit</button>
             </form>
         </section>
@@ -251,37 +266,6 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Simple example for dynamic data (in a real scenario, this could pull from an API)
-            const serverStatus = document.getElementById("server-status");
-            const playerCount = document.getElementById("player-count");
-            const activeMods = document.getElementById("active-mods");
-
-            // Fake data for illustration
-            let isServerOnline = false;
-            let currentPlayerCount = 0;
-            let mods = ["Currently", "13"];
-
-            // Update server status
-            if (!isServerOnline) {
-                serverStatus.textContent = "Offline";
-                serverStatus.style.color = "red";
-            }
-
-            // Update player count
-            playerCount.textContent = currentPlayerCount;
-
-            // Update active mods
-            activeMods.textContent = mods.join(", ");
-        });
-
-        document.getElementById("contact-form").addEventListener("submit", function(e) {
-            e.preventDefault(); // Prevent form submission
-            alert("Form submitted successfully!");
-        });
-    </script>
-
 </body>
+
 </html>
