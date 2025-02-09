@@ -29,7 +29,12 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: var(--background-color);
+            background-image: url('images/107410_20250202150627_1.png'); /* Image background */
+            background-size: cover; /* Ensures the background image covers the entire page */
+            background-position: center; /* Centers the background image */
+            background-attachment: fixed; /* Keeps the background image fixed while scrolling */
+            background-color: #f0f0f0; /* Fallback color */
+            background: linear-gradient(to bottom, #3498db, #ecf0f1); /* Fallback gradient background */
             color: #333;
             line-height: 1.6;
         }
