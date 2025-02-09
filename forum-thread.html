@@ -12,192 +12,184 @@
     <link rel="icon" href="path-to-favicon.ico" type="image/x-icon">
 
     <style>
-        :root {
-            --primary-color: #3498db;
-            --secondary-color: #2c3e50;
-            --highlight-color: #f39c12;
-            --background-color: #ecf0f1;
-            --hover-color: #2980b9;
-            --space-unit: 16px;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* Basic styling for your page */
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: var(--background-color);
-            color: #333;
-            line-height: 1.6;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
         }
 
-        h1,
-        h2 {
-            color: var(--secondary-color);
-            font-family: 'Oswald', sans-serif;
-        }
-
+        /* Header styling */
         header {
-            background: linear-gradient(to right, #3498db, #2980b9);
-            color: white;
-            padding: var(--space-unit) 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        header .container {
-            width: 90%;
-            margin: 0 auto;
-            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
         }
 
         header nav ul {
-            list-style: none;
             display: flex;
             justify-content: center;
-            padding-top: 10px;
+            list-style-type: none;
+            padding: 0;
         }
 
         header nav ul li {
-            margin: 0 var(--space-unit);
+            margin: 0 15px;
         }
 
         header nav ul li a {
+            color: #fff;
             text-decoration: none;
-            color: white;
-            font-weight: bold;
-            transition: color 0.3s ease;
+            font-size: 1.1em;
         }
 
         header nav ul li a:hover {
-            color: var(--highlight-color);
+            text-decoration: underline;
         }
 
+        /* Main content and sidebar styling */
         main {
-            padding: 40px 0;
-            background-color: #fff;
-        }
-
-        section {
-            padding: 30px;
-            margin-bottom: var(--space-unit);
-            background-color: var(--background-color);
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        section:hover {
-            transform: scale(1.02);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        section h2 {
-            margin-bottom: var(--space-unit);
-            font-family: 'Oswald', sans-serif;
-            font-weight: 700;
-        }
-
-        .button-primary {
-            display: inline-block;
-            padding: var(--space-unit) 20px;
-            background-color: var(--primary-color);
-            color: white;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .button-primary:hover {
-            background-color: var(--hover-color);
-            transform: scale(1.05);
-        }
-
-        .server-stats p {
-            margin: var(--space-unit) 0;
-            font-size: 1.1rem;
-        }
-
-        #server-status {
-            color: green;
-        }
-
-        /* Event List */
-        .event-list p {
-            margin: var(--space-unit) 0;
-            font-size: 1.1rem;
-        }
-
-        /* Contact Form */
-        form {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
+            margin: 20px;
         }
 
-        form input,
-        form textarea {
-            padding: var(--space-unit);
-            margin-bottom: var(--space-unit);
-            border: 1px solid #ccc;
+        #forum-thread {
+            flex: 1;
+            max-width: 75%;
+        }
+
+        #sidebar {
+            width: 20%;
+            background-color: #fff;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            transition: border-color 0.3s ease;
         }
 
-        form input:focus,
-        form textarea:focus {
-            border-color: var(--primary-color);
-            outline: none;
+        /* Post styling */
+        .post {
+            background-color: #fff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        form button {
-            padding: var(--space-unit) 20px;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+        .post p {
+            margin: 5px 0;
         }
 
-        form button:hover {
-            background-color: var(--hover-color);
-            transform: scale(1.05);
+        /* User profile in posts */
+        .user-profile {
+            display: flex;
+            align-items: center;
         }
 
-        footer {
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 20px 0;
+        .user-profile .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        /* Pagination styling */
+        #pagination {
+            margin: 20px 0;
             text-align: center;
         }
 
-        footer a {
-            color: var(--highlight-color);
+        #pagination ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #pagination ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        #pagination ul li a {
             text-decoration: none;
-            transition: color 0.3s ease;
+            color: #3498db;
         }
 
-        footer a:hover {
-            color: #ecf0f1;
+        /* Tags styling */
+        .tags {
+            margin-top: 10px;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header nav ul {
-                flex-direction: column;
-            }
+        .tag {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            margin-right: 5px;
+        }
 
-            .container {
-                width: 100%;
-                padding: 10px;
-            }
+        /* Reply Section */
+        #reply {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-            form {
-                width: 100%;
-            }
+        /* Post buttons (like/dislike) */
+        .post-interaction {
+            margin-top: 10px;
+        }
+
+        .like-button, .dislike-button {
+            padding: 8px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .like-button:hover, .dislike-button:hover {
+            background-color: #3498db;
+            color: white;
+        }
+
+        /* Button styling */
+        button {
+            padding: 8px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #3498db;
+            color: white;
+        }
+
+        /* Search Bar Styling */
+        #search-bar {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #search-bar input {
+            padding: 8px 15px;
+            width: 80%;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        #search-bar button {
+            padding: 8px 15px;
+            cursor: pointer;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            border-radius: 5px;
         }
 
     </style>
@@ -223,17 +215,66 @@
 
     <!-- Main Content -->
     <main>
+        <!-- Sidebar Section -->
+        <aside id="sidebar">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="#general">General Discussion</a></li>
+                <li><a href="#gameplay">Gameplay</a></li>
+                <li><a href="#strategy">Strategy</a></li>
+                <li><a href="#events">Events</a></li>
+            </ul>
+        </aside>
+
+        <!-- Forum Thread Section -->
         <section id="forum-thread">
+            <!-- Search Bar Section -->
+            <section id="search-bar">
+                <input type="text" placeholder="Search threads..." aria-label="Search threads">
+                <button type="submit">Search</button>
+            </section>
+
             <h2>Thread Title</h2>
+
             <div class="post">
+                <div class="user-profile">
+                    <img src="path-to-avatar.jpg" alt="User Avatar" class="avatar">
+                    <div class="user-info">
+                        <p><strong>Username</strong></p>
+                        <p>Member since: January 2020</p>
+                        <p>Posts: 45</p>
+                    </div>
+                </div>
                 <p><strong>Username</strong> - <span>Time</span></p>
                 <p>This is a post in the thread. Users can reply and share their thoughts.</p>
+                <div class="tags">
+                    <span class="tag">Gameplay</span>
+                    <span class="tag">Strategy</span>
+                </div>
+                <div class="post-interaction">
+                    <button class="like-button">👍 Like</button>
+                    <button class="dislike-button">👎 Dislike</button>
+                </div>
             </div>
 
             <div class="post">
                 <p><strong>Username</strong> - <span>Time</span></p>
                 <p>This is another post in the thread.</p>
             </div>
+
+            <!-- Pagination Section -->
+            <section id="pagination">
+                <p>Page 1 of 5</p>
+                <nav>
+                    <ul>
+                        <li><a href="#">Prev</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">Next</a></li>
+                    </ul>
+                </nav>
+            </section>
 
             <!-- Reply Section -->
             <section id="reply">
@@ -251,7 +292,6 @@
         <p>&copy; 2025 DSS Arma 3 Community. All rights reserved.</p>
         <p>Follow us on: <a href="https://discord.gg/FPnx3ZPehF" target="_blank">Discord</a></p>
     </footer>
-
 </body>
 
 </html>
