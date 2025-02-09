@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Join the DSS Arma 3 Community Forum to discuss tactics, share content, and meet fellow players.">
+    <meta name="keywords" content="Arma 3, DSS, forum, community">
+    <title>DSS Arma 3 Community Forum</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="path-to-favicon.ico" type="image/x-icon">
+
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --highlight-color: #f39c12;
+            --background-color: #ecf0f1;
+            --hover-color: #2980b9;
+            --space-unit: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            color: var(--secondary-color);
+            font-family: 'Oswald', sans-serif;
+        }
+
+        header {
+            background: linear-gradient(to right, #3498db, #2980b9);
+            color: white;
+            padding: var(--space-unit) 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+        }
+
+        header nav ul li {
+            margin: 0 var(--space-unit);
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: var(--highlight-color);
+        }
+
+        main {
+            padding: 40px 0;
+            background-color: #fff;
+        }
+
+        section {
+            padding: 30px;
+            margin-bottom: var(--space-unit);
+            background-color: var(--background-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        section h2 {
+            margin-bottom: var(--space-unit);
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+        }
+
+        .button-primary {
+            display: inline-block;
+            padding: var(--space-unit) 20px;
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .button-primary:hover {
+            background-color: var(--hover-color);
+            transform: scale(1.05);
+        }
+
+        .server-stats p {
+            margin: var(--space-unit) 0;
+            font-size: 1.1rem;
+        }
+
+        #server-status {
+            color: green;
+        }
+
+        /* Event List */
+        .event-list p {
+            margin: var(--space-unit) 0;
+            font-size: 1.1rem;
+        }
+
+        /* Contact Form */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form input,
+        form textarea {
+            padding: var(--space-unit);
+            margin-bottom: var(--space-unit);
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            transition: border-color 0.3s ease;
+        }
+
+        form input:focus,
+        form textarea:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+
+        form button {
+            padding: var(--space-unit) 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: var(--hover-color);
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--highlight-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ecf0f1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+            }
+
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+
+            form {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Arma 3 Community Forum</h1>
+            <nav aria-label="Forum navigation">
+                <ul>
+                    <li><a href="#home" aria-label="Go to Home">Home</a></li>
+                    <li><a href="#about" aria-label="Go to About">About</a></li>
+                    <li><a href="#community" aria-label="Go to Community">Community</a></li>
+                    <li><a href="#mods" aria-label="Go to Mods">Mods</a></li>
+                    <li><a href="#events" aria-label="Go to Events">Events</a></li>
+                    <li><a href="#contact" aria-label="Go to Contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="forum">
+            <h2>Forum</h2>
+            <div class="forum-container">
+                <!-- Forum Categories -->
+                <div class="forum-category">
+                    <h3>Tactics and Strategy</h3>
+                    <p>Discuss the best strategies for different types of missions.</p>
+                    <a href="forum-thread.html" class="button-primary">Go to Thread</a>
+                </div>
+
+                <div class="forum-category">
+                    <h3>Content Creation</h3>
+                    <p>Share your custom missions, mods, and other creations with the community.</p>
+                    <a href="forum-thread.html" class="button-primary">Go to Thread</a>
+                </div>
+
+                <div class="forum-category">
+                    <h3>General Discussion</h3>
+                    <p>Talk about anything related to Arma 3 or the DSS Community.</p>
+                    <a href="forum-thread.html" class="button-primary">Go to Thread</a>
+                </div>
+
+                <!-- Add more categories as needed -->
+            </div>
+
+            <!-- Add a button to create a new thread -->
+            <a href="create-thread.html" class="button-primary">Create New Thread</a>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 DSS Arma 3 Community. All rights reserved.</p>
+        <p>Follow us on: <a href="https://discord.gg/FPnx3ZPehF" target="_blank">Discord</a></p>
+    </footer>
+
+</body>
+
+</html>
