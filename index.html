@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Arma 3 Community</title>
+    <meta name="description" content="Join the DSS Arma 3 Community for tactical gameplay, mods, and active events.">
+    <meta name="keywords" content="Arma 3, DSS, mods, community, events">
+    <title>DSS Arma 3 Community</title>
 
     <style>
         /* Reset some default styles */
@@ -132,8 +134,23 @@
             color: #ecf0f1;
             text-decoration: none;
         }
-    </style>
 
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+            }
+
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+
+            form {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -143,12 +160,12 @@
             <h1>Arma 3 Community</h1>
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#community">Community</a></li>
-                    <li><a href="#mods">Mods</a></li>
-                    <li><a href="#events">Events</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home" aria-label="Go to Home">Home</a></li>
+                    <li><a href="#about" aria-label="Go to About">About</a></li>
+                    <li><a href="#community" aria-label="Go to Community">Community</a></li>
+                    <li><a href="#mods" aria-label="Go to Mods">Mods</a></li>
+                    <li><a href="#events" aria-label="Go to Events">Events</a></li>
+                    <li><a href="#contact" aria-label="Go to Contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -158,13 +175,13 @@
     <main>
         <!-- Home Section -->
         <section id="home">
-            <h2>Welcome to Arma 3 Community</h2>
+            <h2>Welcome to the DSS Arma 3 Community</h2>
             <p>Join us for tactical gameplay, mods, and an active community.</p>
             <!-- Server Stats Example -->
             <div class="server-stats">
-                <p>Server Status: <span id="server-status">Ofline</span></p>
+                <p>Server Status: <span id="server-status">Offline</span></p>
                 <p>Players Online: <span id="player-count">000</span></p>
-                <p>Active Mods: <span id="active-mods">n/a, n/a</span></p>
+                <p>Active Mods: <span id="active-mods">Currently 13</span></p>
             </div>
         </section>
 
@@ -186,8 +203,19 @@
         <section id="mods">
             <h2>Featured Mods</h2>
             <ul>
-                <li>Mod 1: ... - <a href="#">Download</a></li>
-                <li>Mod 2: ... - <a href="#">Download</a></li>
+                <li>Mod 1: Ace - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=463939057" target="_blank" aria-label="Download Mod Ace">Download</a></li>
+                <li>Mod 2: Antistasi - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2867537125" target="_blank" aria-label="Download Mod Antistasi">Download</a></li>
+                <li>Mod 3: Bystrokhodny Tanks - BT7 And Variants - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2398198697" target="_blank" aria-label="Download Mod Bystrokhodny Tanks - BT7 And Variants">Download</a></li>
+                <li>Mod 4: CBA_A3 - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=450814997" target="_blank" aria-label="Download Mod CBA_A3">Download</a></li>
+                <li>Mod 5: Colorful Flares - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3364788586" target="_blank" aria-label="Download Mod Colorful Flares">Download</a></li>
+                <li>Mod 6: CUP Terrains - Core - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=583496184" target="_blank" aria-label="Download Mod CUP Terrains - Core">Download</a></li>
+                <li>Mod 7: CUP Terrains - Maps - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=583544987" target="_blank" aria-label="Download Mod CUP Terrains - Maps">Download</a></li>
+                <li>Mod 8: IFA3 AIO  - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2648308937" target="_blank" aria-label="Download Mod IFA3 AIO">Download</a></li>
+                <li>Mod 9: JSRS SOUNDMOD 2025 Beta - AiO Compat Files - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3407970596" target="_blank" aria-label="Download Mod JSRS SOUNDMOD 2025 Beta - AiO Compat Files">Download</a></li>
+                <li>Mod 10: JSRS SOUNDMOD 2025 Beta - RC1 - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3407948300" target="_blank" aria-label="Download Mod JSRS SOUNDMOD 2025 Beta - RC1">Download</a></li>
+                <li>Mod 11: WW2 Armored Cars [IFA3] - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2811202098" target="_blank" aria-label="Download Mod WW2 Armored Cars [IFA3]">Download</a></li>
+                <li>Mod 12: WW2 Tanks [IFA3] - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2842504702" target="_blank" aria-label="Download Mod WW2 Tanks [IFA3]">Download</a></li>
+                <li>Mod 13: Zeus Enhanced - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1779063631" target="_blank" aria-label="Download Mod Zeus Enhanced">Download</a></li>
             </ul>
         </section>
 
@@ -195,8 +223,8 @@
         <section id="events">
             <h2>Upcoming Events</h2>
             <div class="event-list">
-                <p>, 2025 - Coming Soon</p>
-                <p>, 2025 - Coming Soon</p>
+                <p>2025 - Coming Soon</p>
+                <p>2025 - Coming Soon</p>
             </div>
         </section>
 
@@ -218,8 +246,8 @@
     <!-- Footer Section -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Arma 3 Community. All rights reserved.</p>
-            <p>Follow us on: <a href="#">Discord</a> | <a href="#">Twitter</a></p>
+            <p>&copy; 2025 DSS Arma 3 Community. All rights reserved.</p>
+            <p>Follow us on: <a href="https://discord.gg/FPnx3ZPehF" target="_blank">Discord</a> | <a href="https://discord.gg/your-discod-link" target="_blank">Discord</a></p>
         </div>
     </footer>
 
@@ -247,6 +275,11 @@
 
             // Update active mods
             activeMods.textContent = mods.join(", ");
+        });
+
+        document.getElementById("contact-form").addEventListener("submit", function(e) {
+            e.preventDefault(); // Prevent form submission
+            alert("Form submitted successfully!");
         });
     </script>
 
