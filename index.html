@@ -29,12 +29,12 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            background-image: url('images/107410_20250202150627_1.jpg'); /* Image background */
-            background-size: cover; /* Ensures the background image covers the entire page */
-            background-position: center; /* Centers the background image */
-            background-attachment: fixed; /* Keeps the background image fixed while scrolling */
-            background-color: #f0f0f0; /* Fallback color */
-            background: linear-gradient(to bottom, #3498db, #ecf0f1); /* Fallback gradient background */
+            background-image: url('images/107410_20250202150627_1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #f0f0f0;
+            background: linear-gradient(to bottom, #3498db, #ecf0f1);
             color: #333;
             line-height: 1.6;
         }
@@ -130,13 +130,11 @@
             color: green;
         }
 
-        /* Event List */
         .event-list p {
             margin: var(--space-unit) 0;
             font-size: 1.1rem;
         }
 
-        /* Contact Form */
         form {
             display: flex;
             flex-direction: column;
@@ -189,7 +187,6 @@
             color: #ecf0f1;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             header nav ul {
                 flex-direction: column;
@@ -206,50 +203,77 @@
         }
 
     </style>
+
+    <script>
+        // Smooth Scroll for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form Validation
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent form submission
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (name === '' || email === '' || message === '') {
+                alert('Please fill out all fields!');
+                return;
+            }
+
+            // If all fields are filled
+            alert('Thank you for contacting us, ' + name + '! We will get back to you shortly.');
+
+            // Clear form fields
+            document.getElementById('contact-form').reset();
+        });
+    </script>
+
 </head>
 
 <body>
-
-    <!-- Header Section -->
     <header>
         <div class="container">
             <h1>Arma 3 Community</h1>
             <nav aria-label="Main navigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about">About</a></li>
+                    <li><a href="index.html">About</a></li>
                     <li><a href="forum-thread.html">Community</a></li>
-                    <li><a href="mods">Mods</a></li>
+                    <li><a href="index.html">Mods</a></li>
                     <li><a href="event-page.html">Events</a></li>
-                    <li><a href="contact">Contact</a></li>
+                    <li><a href="index.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <!-- Home Section -->
         <section id="home">
             <h2>Welcome to the DSS Arma 3 Community Known as the 404th Chairborne</h2>
             <p>Join us for tactical gameplay, mods, and an active community.</p>
             <a href="https://discord.gg/FPnx3ZPehF" class="button-primary">Join 404th Chairborne Action</a>
         </section>
 
-        <!-- About Section -->
         <section id="about">
             <h2>About Our Server</h2>
             <p>The 404th Chairborne's offer a unique, immersive experience in Arma 3 with custom mods and community-driven events.</p>
         </section>
 
-        <!-- Community Section -->
         <section id="community">
             <h2>Community Hub</h2>
             <p>Join our forums to discuss tactics, share content, and meet fellow players!</p>
             <a href="forum-thread.html" class="button-primary">Go to Forum</a>
         </section>
 
-        <!-- Mods Section -->
         <section id="mods">
             <h2>Featured Mods</h2>
             <ul>
@@ -269,19 +293,13 @@
             </ul>
         </section>
 
-        <!-- Events Section -->
         <section id="events">
             <h2>Current Events</h2>
             <div class="event-list">
-                <p>| Antistasi WW2 - Cherno Winter |
-                   | Faction: Polish               |
-                   | Enemy: Germany                |
-                   | Invaders: Soviet              |</p>
-                <!-- Add more events -->
+                <p>| Antistasi WW2 - Cherno Winter | Faction: Polish | Enemy: Germany | Invaders: Soviet |</p>
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact">
             <h2>Contact Us</h2>
             <form id="contact-form">
@@ -296,7 +314,6 @@
         </section>
     </main>
 
-    <!-- Footer Section -->
     <footer>
         <p>&copy; 2025 DSS Arma 3 Community. All rights reserved.</p>
         <p>Follow us on: <a href="https://discord.gg/FPnx3ZPehF" target="_blank">Discord</a></p>
